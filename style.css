@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+body {
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    color: white;
+    background-color: var(--off-black);
+
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 325px;
+    height: 580px;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    background-color: var(--dark-grey);
+}
+
+.image {
+    margin-top: -10px;
+    border-radius: 50%;
+    transform: scale(.55);
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+h2 {
+    margin: 10px 0 25px 0;
+    font-size: 1em;
+    color: var(--green);
+}
+
+#container nav {
+    display: flex;
+    flex-direction: column;
+    margin: 18px 5px 18px;
+    flex-grow: 1;
+    width: 90%;
+    justify-content: space-between;
+}
+
+nav li {
+    display: flex;
+    list-style: none;
+    height: 16%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+nav a {
+    width: 100%;
+    padding: 13px 0;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 700;
+    background-color: var(--grey);
+    text-decoration: none;
+    color: var(--white);
+    transition: .2s;
+}
+
+nav a:hover {
+    background-color: var(--green);
+    color: var(--dark-grey);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1440px) {
+    #container {
+        height: 550px;
+        padding: 20px;
+    }
+
+    .image {
+        transform: scale(.5);
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2,
+    p {
+        font-size: .9em;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    nav li {
+        height: 15%;
+    }
+
+    nav a {
+        padding: 9px;
+        font-size: 12px
+    }
+}
